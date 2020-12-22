@@ -1,0 +1,452 @@
+/* golbal*/
+html{
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* end it */
+
+/* start the . section */ 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.con{
+    width: 80%;
+    margin: auto
+}
+.clear{
+    clear: both
+}
+.ul-none{
+    list-style: none;
+    text-align: center
+}
+a{
+    text-decoration: none
+}
+/* start header*/
+
+header{
+    width: 100%;
+    height: 100px;
+    line-height: 3
+}
+.west{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+header ul li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 12px 9px;
+}
+header nav ul li a{
+    color: #000;
+    position: relative;
+    padding: 4px
+}
+
+header .header-logo{
+    flex: 1
+}
+header nav{
+    flex: 3
+}
+header .nav-icons{
+    flex: 1
+}
+header .nav-icons li.red-zone{
+    position: relative;
+    padding-right: 15px
+}
+header .nav-icons li.red-zone:after{
+   position: absolute;
+    content: "0";
+    background: darkred;
+    color: #FFF;
+    bottom: 20px;
+    right: 0px;
+    border-radius: 50%;
+    padding: 0px 6px;
+    font-size: 7px
+}
+header nav ul li a:before {
+    content: "";
+    border-color: darkred;
+    position: absolute;
+    border-width: 0 2px;
+    border-style: solid;
+    width: 99%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s;
+    transform: scale3d(1,0,1)
+}
+header nav ul li a:hover:before {
+    transform: scale3d(1,1,1)
+}
+header nav ul li a:after {
+    content: "";
+    border-color: darkred;
+    position: absolute;
+    border-width: 2px 0;
+    border-style: solid;
+    width: 100%;
+    height: 91%;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s;
+    transform: scale3d(0,1,1);
+    transform-origin: left
+    
+}
+header nav ul li a:hover:after {
+    transform: scale3d(1,1,1);
+    transition-delay: 0.2s
+
+}
+/* drop down*/
+.dropdown{
+    position: relative
+}
+.dropitmenu{
+    position: absolute;
+    width: 400px;
+    border: 2px solid darkred;
+    padding: 5px;
+    margin-top: 5px;background-color: #FFF;
+    transform: scale(0);
+    transition: transform 0.5s ;
+    visibility: hidden;
+}
+header nav ul li:hover .dropitmenu {
+    transform: scale(1);
+    visibility: visible;
+}
+.dropitmenu ul{
+    display: table-cell
+}
+
+
+
+/* slider */
+
+section.slider{
+    position: relative
+}
+
+section.slider img {
+    width: 100%
+}
+
+.pull1{
+    position: absolute;
+    border: 5px solid black;
+    border-radius: 50%;
+    content: "";
+    bottom: 20px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    transform: scale(0)
+}
+.pull2{
+    position: absolute;
+    border: 5px solid black;
+    border-radius: 50%;
+    content: "";
+    bottom: 20px;
+    left: 49%;
+    width: 5px;
+    height: 5px;
+    transform: scale(0)
+}
+section.slider:hover span{
+    transform: scale(1)
+}
+
+span.pull1:hover{
+border: 5px solid white
+}
+span.pull2:hover{
+border: 5px solid white
+}
+
+/* start section two */
+section.two{
+    width: 100%;
+    height: 500px;
+}
+section.two h1{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 20px;
+    text-align: center
+}
+section.two h1:after{
+    content: "";
+    display: block;
+    width: 75px;
+    height: 5px;
+    background-color: darkred;
+    margin: 20px auto;
+    transition: width 0.5s
+}
+section.two:hover h1:after{
+    width: 100px;
+
+}
+.sectiontwonimg{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px
+}
+.sectiontwonimg img{
+    width: 100%;
+    margin-bottom: 25px
+}
+.sectiontwonimg h4{
+    color: gray;
+    font-weight: normal
+}
+.fa-2x {
+    width: 30px;
+    height: 30px;
+    background-color: darkred;
+    text-align: center;
+    display: block;
+    color:#FFF;
+    line-height: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s
+}
+.sectiontwonimg:hover .fa-2x{
+    visibility: visible;
+    opacity: 1
+}
+.dis{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    margin: 100px 0
+    
+    }
+.dis .dis1{
+    background-color: ghostwhite
+}
+.dis .dis1{
+flex: 2
+}
+.dis .dis1 .dis11 i{
+    float: left;
+    color: darkred;
+    font-size: 50px;
+}
+.dis .dis1 .dis11 h3{
+    margin-left: 60px;
+    font-size: 20px
+}
+.dis .dis1 .dis11 h6{
+    margin-left: 60px;
+    color: gray;
+    margin-bottom: 30px
+}
+.dis .dis1 p{
+    color: gray;
+    line-height: 3
+}
+
+.dis .dis1 span{
+    width: 60px;
+    height: 4px;
+    float: right;
+    background-color: gray;
+    margin: 15px
+}
+.dis .dis1 span:hover{
+    background-color: darkred
+}
+.dis2{
+    background-image: url(../images/cms-banner-1.jpg);
+    background-size: cover;
+    width: auto;
+    flex: 1;
+    transition: scale
+}
+.dis2:hover{
+    transform: scale(1.05);
+}
+
+.dis2 h4{
+    color: gray;
+    margin-top: 15px;
+    margin-left: 10px
+}
+.dis2 h2{
+    margin-top: 15px;
+    margin-left: 10px
+
+}
+.dis3{
+    flex: 1;
+    background-image: url(../images/cms-banner-2.jpg);
+    background-size: cover;
+        transition: scale
+
+}
+.dis3:hover{
+    transform: scale(1.05);
+}
+.dis3 h4{
+    color: gray;
+    margin-top: 15px;
+    margin-left: 10px
+}
+.dis3 h2{
+    margin-top: 15px;
+    margin-left: 10px
+
+}
+/****/
+.sprites {display: flex;}
+.sprite-item{
+    flex: 1; 
+    text-align: center;
+    height: 60px
+}
+.sprite-icon{
+    background-image: url(../images/service-icon.png);
+    height: 55px;
+    background-repeat: no-repeat;
+    
+}
+.sprite-icon-1{
+    background-position: center 5px ;
+    transition:  all 0.5s
+}
+.sprite-item:hover .sprite-icon-1{
+    background-position: center -86px
+}
+.sprite-icon-2{
+    background-position: center -180px ;
+    transition:  all 0.5s
+}
+.sprite-item:hover .sprite-icon-2{
+    background-position: center -273px
+}
+.sprite-icon-3{
+    background-position: center -366px ;
+    transition:  all 0.5s
+}
+.sprite-item:hover .sprite-icon-3{
+    background-position: center -455px
+}
+.sprite-icon-4{
+    background-position: center -549px ;
+    transition:  all 0.5s
+}
+.sprite-item:hover .sprite-icon-4{
+    background-position: center -639px
+}
+.sprite-icon-5{
+    background-position: center -734px ;
+    transition:  all 0.5s
+}
+.sprite-item:hover .sprite-icon-5{
+    background-position: center -826px
+}
+.sprite-info{padding: 50px}
+.sprite-info h3{
+    font-size: 17px
+}
+.sprite-info span{
+    color: gray;
+    font-size: 15px
+}
+/**** feat *******/
+.feats{
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+}
+.feat-head{
+    text-align: center;
+    font-size: bold;
+    font-weight: 30px;
+}
+.feat-head:after{
+    content: "";
+    display: block;
+    width: 75px;
+    height: 5px;
+    background-color: gray;
+    margin: 20px auto;
+    transition: width 0.5s
+    
+}
+.feats ul li{
+text-align: center;
+    display: inline-block;
+    padding: 20px;
+    
+}
+/*****/
+.pro{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px
+}
+.pro-img{
+    position: relative;
+}
+.pro11{
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: scale(0);
+    transition: transform 0.5s;
+    
+}
+.pro11 ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.pro11 ul li{
+    width: 40px;
+    height: 40px;
+    background: darkred;
+    display: inline-block;
+    text-align: center
+}
+.pro11 ul li i{
+    color: #FFF;
+    line-height: 20px; 
+}
+.pro1:hover .pro11{
+    transform: scale(1)
+}
+.pro1 i.active{
+    color: yellow
+}
+.pro1info span {
+    display: block;
+    margin: 5px 0;
+}
+.pro1info i{
+    margin-top: 10px
+}
+footer{
+    background-color: #000;
+    color: #FFF;
+    text-align: center;
+}
+footer div p{
+    font-weight: bold
+}
